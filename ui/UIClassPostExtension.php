@@ -7,6 +7,8 @@ class UIClassPostExtension {
         'post_tag'
     ];
     const OPTION_POSTEXTENSION = '_k3e_postextension';
+    const OPTION_POSTEXTENSION_DOCUMENT_CONTENT = '_k3e_posts_pdf';
+    const OPTION_POSTEXTENSION_DOCUMENT = '_k3e_postextension_document';
 
     public static function init() {
         //Usuwamy taksonomię

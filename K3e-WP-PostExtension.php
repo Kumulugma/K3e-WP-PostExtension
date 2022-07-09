@@ -10,7 +10,8 @@
   Domain Path:
   Version: 0.0.1a
  */
-
+require_once(plugin_dir_path(__FILE__) . '/vendor/autoload.php');
+            
 add_action('init', 'k3e_postextension_plugin_init');
 
 function k3e_postextension_plugin_init() {
@@ -21,7 +22,6 @@ function k3e_postextension_plugin_init() {
     require_once 'ui/UIFunctions.php';
 
     UIClassPostExtension::init();
-    $taxonomies = unserialize(get_option(UIClassPostExtension::OPTION_POSTEXTENSION));
     
     if (is_admin()) {
         UIClassPostExtensionAdmin::run();
